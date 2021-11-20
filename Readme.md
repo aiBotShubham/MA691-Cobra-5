@@ -18,11 +18,11 @@ In this project,we analyse the CF dataset which is a longitudinal data which was
 
 * The Longitudnal dataset from `UK Cystic Fibrosis Registry`  of 312 patients measured across 16 different time intervals.
 * This time-to-event (survival) dataprovides three pieces of information for each subject:  
-<ul>
+<ol>
  <li> observed covariates
  <li> time-to-event(s),
  <li> a label indicating the type of event (e.g., deathor adverse clinical event) including right-censoring.  
-</ul>
+</ol>
 
 
 ## Survival Function
