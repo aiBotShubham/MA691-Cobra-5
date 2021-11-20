@@ -42,15 +42,14 @@ Multiple ML Models are applied to predict the survival function:
 
 ## COBRA Implementation and Results
 
-Cobra implementation is done from scratch by defining a class in python and using various models to combine them through voting. 
-
-Applying Random Survival Forest yielded an `R^2` value of 0.65. Later, applying Cobra increased the `R^2` value to 0.77. 
-
-In addition to `R^2` analysis, the survival function is plotted against the time in days, and it agrees with the mathematical behavior and python implementation of Random Survival Forest.
 
 COBRA:
 Using the above machines we obtain survival functions which measures prob-ability of patient surviving after a given time 'τ'.
 It is a cumulative probabilitymeasure used in most of the survival analysis methods.  We create a pickledictionary to store values of survival function at pre-defined eventtimes foreach of '312' patients which can be used to make prediction.  Thus we get anarray of '312 * 113' prediction i.e Patients x Times.
+
+Since  our  time  dimension  is  constant  we  iterate  on  our  event times  top erform Cobra Aggregation learning method which takes average of commonpoints within 'epsilon' range. Where 'epsilon'  is chosen to be most optimal at '10^−3'.  We perform Cobra Aggregation for each time step to get an cobraprediction dictionary with 'Patients x Time' dimension.
+
+Results:
 ![image](https://user-images.githubusercontent.com/8698342/142727839-9f3a9d1c-5160-4410-bf8c-4033498176ed.png)
 ![image](https://user-images.githubusercontent.com/8698342/142727846-80daa29e-8b04-4bd1-89cb-5468ba543ccd.png)
 
