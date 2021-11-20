@@ -11,24 +11,23 @@
 
 ## Objective
 
-We use the Transbig Dataset to predict the survival function for distant metastasis in breast cancer patients using survival analysis and combined regression strategies. 
+In this project,we analyse the CF dataset which is a longitudinal data which was collectedby the UK Cystic Fibrosis Registry.  We use multiple regression strategies topredict the survival function and then employ COBRA to combine all thesemethods to predict the survival function. 
 
 
 ## Dataset
 
-* The data from `TRANSBIG` validation study of 198 patients is used to perform the analysis.
-* In TRANSBIG, the datasets `Patient Characteristic and Diagnostic Details`, and `Gene Features` are joined.
-* Patient Characteristic and Diagnostic Details contains the clinical information of the patients.
-* The observations in this dataset are censored, in the sense that for some units the event of interest has not occured at the time the data was analyzed or collected.
-* Gene Features dataset contains the information of 22283 genes features of the patients.
+* The Longitudnal dataset from `UK Cystic Fibrosis Registry`  of 312 patients measured across 16 different time intervals.
+* This time-to-event (survival) dataprovides three pieces of information for each subject:  
+<ul>
+ <li> observed covariates
+ <li> time-to-event(s),
+ <li> a label indicating the type of event (e.g., deathor adverse clinical event) including right-censoring.  
+</ul>
 
- 
-## What is Survival Function?
 
-By definition survival function is a function that gives the probability that a patient will survive beyond any specified time. 
-Mathematically, if T is a continuous random variable with pdf f(t) and cdf F(t). Then the probability that the patient suffered distant metastasis by time duration t is nothing but the survival function. 
+## Survival Function
+![image](https://user-images.githubusercontent.com/8698342/142727652-206130ee-f98b-4c30-9168-39a808b2ebe0.png)
 
-![image](https://user-images.githubusercontent.com/50804314/140692638-e80749d1-3662-4d80-9b99-a638ab61483b.png)
 
 ## Implementation of Predictive Models
 Multiple ML Models are applied to predict the survival function:
@@ -67,12 +66,12 @@ Random Survival Forest:
 ## Directory Tree:
 
 ```
-MA691-COBRA-3
+MA691-COBRA-5
 |
 └───README.md
 |   
 │
-└───Documentation  // TRANSBIG Dataset README and other documentations
+└───Papers //   Papers utilized for understanding related concepts and References
 |
 │
 └───Data
@@ -100,21 +99,3 @@ MA691-COBRA-3
 |
 ```
 
-## References
-1. Biau, Gérard, et al. "COBRA: A combined regression strategy." Journal of Multivariate Analysis 146 (2016): 18-28.
-
-2. Hikichi, Shiori, Masahiro Sugimoto, and Masaru Tomita. "Correlation-centred variable selection of a gene expression signature to predict breast cancer metastasis." Scientific reports 10.1 (2020): 1-8.
-
-3. Wang, Yixin, et al. "Gene-expression profiles to predict distant metastasis of lymph-node-negative primary breast cancer." The Lancet 365.9460 (2005): 671-679.
-
-4. Ishwaran, Hemant, et al. "Random survival forests." The annals of applied statistics 2.3 (2008): 841-860.
-
-5. Desmedt, Christine, et al. "Strong time dependence of the 76-gene prognostic signature for node-negative breast cancer patients in the TRANSBIG multicenter independent validation series." Clinical cancer research 13.11 (2007): 3207-3214.
-
-6. [Hazard Function](https://www.statisticshowto.com/hazard-function/)
-
-7. [Survuval Analysis](https://en.wikipedia.org/wiki/Survival_analysis)
- 
-8. [Hazard and cumulative hazard plotting](https://www.itl.nist.gov/div898/handbook/apr/section2/apr222.htm)
-
-9. [Intuition for cumulative hazard function](https://stats.stackexchange.com/questions/60238/intuition-for-cumulative-hazard-function-survival-analysis/138185)
