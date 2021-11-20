@@ -10,7 +10,7 @@
 
 ## Objective
 
-In this project,we analyse the CF dataset which is a longitudinal data which was collectedby the UK Cystic Fibrosis Registry.  We use multiple regression strategies topredict the survival function and then employ COBRA to combine all thesemethods to predict the survival function. 
+In this project,we analyse the CF dataset which is a longitudinal data which was collectedby the UK Cystic Fibrosis Registry.  We use multiple regression strategies to predict the survival function and then employ COBRA to combine all these methods to predict the survival function. 
 
 
 ## Dataset
