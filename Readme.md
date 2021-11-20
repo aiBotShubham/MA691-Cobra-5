@@ -29,19 +29,16 @@ In this project,we analyse the CF dataset which is a longitudinal data which was
 ![image](https://user-images.githubusercontent.com/8698342/142727652-206130ee-f98b-4c30-9168-39a808b2ebe0.png)
 
 
-## Implementation of Predictive Models
+## Survival Machines
 Multiple ML Models are applied to predict the survival function:
 <ul>
- <li> Support Vector Machine (svm.SVC)
- <li> KNeighborsClassifier
- <li> DecisionTreeClassifier
- <li> Gaussian Naive Bayes
- <li>  LinearDiscriminantAnalysis
+ <li> KMF : Kaplan-Meier (KM) Function
+ <li> Dynamic-DeepHit  is  a  multi-task  RNN based network
+ <li> Random survival forest (RSF) an ensemble of trees
+ <li> Cox-Time : Time-varying covariance
+ <li> Multi-Task Logistic Regression (MTLR) 
 </ul>
 
-In addition to this, we also implemented Random Survival Forest to predict the survival function in two ways. 
-* Using the python library `Random Survival Forest`
-* Native Implementation by defining Indicator variables for various values of `t`, and using Regression models to predict these, and calculating survival function as in above formula. 
 
 ## COBRA Implementation and Results
 
@@ -52,16 +49,10 @@ Applying Random Survival Forest yielded an `R^2` value of 0.65. Later, applying 
 In addition to `R^2` analysis, the survival function is plotted against the time in days, and it agrees with the mathematical behavior and python implementation of Random Survival Forest.
 
 COBRA:
-
-![image](https://user-images.githubusercontent.com/14922339/140705220-c430000f-347f-434d-97aa-869ecc019812.png)
-
-<!-- ![image](https://user-images.githubusercontent.com/50804314/140694209-2c29fe58-440c-408d-aa9f-b3fdf2fd473f.png)
- -->
-Random Survival Forest:
-
-![image](https://user-images.githubusercontent.com/14922339/140705401-5f681711-289d-4c77-8a47-db3c9a146355.png)
-
-
+Using the above machines we obtain survival functions which measures prob-ability of patient surviving after a given time 'τ'.
+It is a cumulative probabilitymeasure used in most of the survival analysis methods.  We create a pickledictionary to store values of survival function at pre-defined eventtimes foreach of '312' patients which can be used to make prediction.  Thus we get anarray of '312 * 113' prediction i.e Patients x Times.
+![image](https://user-images.githubusercontent.com/8698342/142727839-9f3a9d1c-5160-4410-bf8c-4033498176ed.png)
+![image](https://user-images.githubusercontent.com/8698342/142727846-80daa29e-8b04-4bd1-89cb-5468ba543ccd.png)
 
 ## Directory Tree:
 
