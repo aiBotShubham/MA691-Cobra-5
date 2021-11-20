@@ -10,7 +10,7 @@
 
 ## Objective
 
-In this project,we analyse the CF dataset which is a longitudinal data which was collectedby the UK Cystic Fibrosis Registry.  We use multiple regression strategies to predict the survival function and then employ COBRA to combine all these methods to predict the survival function. 
+In this project, we analyse the CF dataset which is a longitudinal data which was collectedby the UK Cystic Fibrosis Registry.  We use multiple regression strategies to predict the survival function and then employ COBRA to combine all these methods to predict the survival function. 
 
 
 ## Dataset
@@ -64,3 +64,5 @@ Results:
 [4]  Changhee  Lee,  Jinsung  Yoon,  and  Mihaela  van  der  Schaar.   Dynamic-deephit:  A  deep  learning  approach  for  dynamic  survival  analysis  withcompeting  risks  based  on  longitudinal  data.IEEE Transactions onBiomedical Engineering, 67(1):122–133, 2020.
 
 [5]  Chun-Nam  Yu,  Russell  Greiner,  Hsiu-Chin  Lin,  and  Vickie  Baracos.Learning patient-specific cancer survival distributions as a sequence of de-pendent regressors. In J. Shawe-Taylor, R. Zemel, P. Bartlett, F. Pereira,and K. Q. Weinberger, editors,Advances in Neural Information Process-ing Systems, volume 24. Curran Associates, Inc., 2011.
+
+Disclaimer: This work is for learning purposes only. The work cannot be used for publications or commercial products without mentor's consent.
