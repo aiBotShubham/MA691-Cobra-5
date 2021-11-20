@@ -6,8 +6,7 @@
 3. Survival Function
 4. Survival Machines
 5. COBRA Implementation
-7. Directory Structure
-8. References
+6. References
 
 ## Objective
 
@@ -53,39 +52,15 @@ Results:
 ![image](https://user-images.githubusercontent.com/8698342/142727839-9f3a9d1c-5160-4410-bf8c-4033498176ed.png)
 ![image](https://user-images.githubusercontent.com/8698342/142727846-80daa29e-8b04-4bd1-89cb-5468ba543ccd.png)
 
-## Directory Tree:
 
-```
-MA691-COBRA-5
-|
-└───README.md
-|   
-│
-└───Papers //   Papers utilized for understanding related concepts and References
-|
-│
-└───Data
-│   │   GSE7390_family.soft.gz    // TRANSBIG Dataset
-│   │   cleaned_data.csv          // Cleaned Data with all patient characterstics and gene features 
-│   │   gene.csv                  // List of 76 most important genes to analyze time to distant metastasis
-|   |   selected.csv              // Subset of cleaned data containing only 76 important gene features and patient characteristics
-│      
-└───Literature   // Various research papers that we used and implemented in our work
-│   
-│   
-└───Notebooks
-|   │   cobra.ipynb            // COBRA Implementation 
-|   │   data_cleaning.ipynb    // Cleaning and extracting relevant data from TRANSBIG zip
-|   │   indicators.ipynb       // Native Implementation to predict Survival Function
-|   │   regression.ipynb       // Application of various regression models to predict time to distant metastasis
-|   │   survival.ipynb         // Application of Random Survival Forest of Scikit-learn
-|
-|
-└───Scripts
-|   │   cobra_estimator.py     // Definition of Cobra Class
-|   │   data_clean.py          // Script to extract, clean and save relevant data in a new csv file
-|   │   main.py                // Main script which calls the COBRA model
-|   │   random_survival.py     // Script that runs in-built Random Survival Forest 
-|
-```
+## References
 
+[1]  G ́erard  Biau,  Aur ́elie  Fischer,  Benjamin  Guedj,  and  James  D.  Malley.Cobra: A combined regression strategy.Journal of Multivariate Analysis,146:18–28, Apr 2016.
+
+[2]  Frank  Emmert-Streib  and  Matthias  Dehmer.   Introduction  to  survivalanalysis  in  practice.Machine Learning and Knowledge Extraction,1(3):1013–1038, 2019.
+
+[3]  H ̊avard Kvamme, Ørnulf Borgan, and Ida Scheel.  Time-to-event predic-tion with neural networks and cox regression, 2019.
+
+[4]  Changhee  Lee,  Jinsung  Yoon,  and  Mihaela  van  der  Schaar.   Dynamic-deephit:  A  deep  learning  approach  for  dynamic  survival  analysis  withcompeting  risks  based  on  longitudinal  data.IEEE Transactions onBiomedical Engineering, 67(1):122–133, 2020.
+
+[5]  Chun-Nam  Yu,  Russell  Greiner,  Hsiu-Chin  Lin,  and  Vickie  Baracos.Learning patient-specific cancer survival distributions as a sequence of de-pendent regressors. In J. Shawe-Taylor, R. Zemel, P. Bartlett, F. Pereira,and K. Q. Weinberger, editors,Advances in Neural Information Process-ing Systems, volume 24. Curran Associates, Inc., 2011.
